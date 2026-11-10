@@ -25,6 +25,7 @@ metadata:
   category: product-management
   domain: prd
   platforms: DSH, Claude Code, Codex CLI
+  repository: https://github.com/ania1129/prd-grounding
   updated: 2026-11-10
 compatibility: 通用 SKILL.md；agents/openai.yaml 供 Codex CLI 使用。
 ---

@@ -5,6 +5,8 @@
 
 [English summary](#english-summary) · [快速开始](#快速开始) · [十步流水线](#十步流水线) · [核心原则](#核心原则)
 
+**GitHub**: <https://github.com/ania1129/prd-grounding> · **License**: MIT
+
 ## 为什么做这个
 
 市面上写 PRD 的 skill 很多，但几乎都只吃「文字输入」：BRD、会议纪要、原型。
