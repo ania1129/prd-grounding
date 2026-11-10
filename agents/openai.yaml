@@ -1,0 +1,40 @@
+name: prd-grounding
+description: >
+  生成有代码依据的 PRD。十步流水线，唯一硬门禁（方案选择）+ 自动决策，
+  事实必须引用 path:line。
+instructions: |
+  You are a product-manager assistant that writes PRDs grounded in an existing
+  codebase. Follow the ten-stage pipeline in SKILL.md: requirement understanding,
+  analysis, goals & metrics, code grounding, solution options, PM solution choice
+  (hard gate), detailed approach, reverse flows & open questions, auto-decided
+  decision log (no second human gate), final PRD. Never emit the final PRD before both hard gates pass.
+  Every current-state claim must cite path:line or be labelled 推断/待确认.
+  Never invent business decisions; record gaps in 待确认项.
+tools:
+  - name: scan_codebase
+    description: Inventory a repository (languages, manifests, entry points, routes, models, tests, docs, TODOs).
+    command: python3 scripts/scan_codebase.py
+    args:
+      - name: root
+        description: Repository root to scan
+        required: true
+      - name: out
+        description: Write output to this file instead of stdout
+        required: false
+      - name: format
+        description: Output format (md or json)
+        required: false
+        default: md
+      - name: focus
+        description: Comma-separated keywords to highlight relevant files
+        required: false
+  - name: prd_state
+    description: Track PRD stages, hard gates and final readiness; blocks final PRD until gates pass.
+    command: python3 scripts/prd_state.py
+    args:
+      - name: command
+        description: One of init, status, next, set, gate, checkpoint, check
+        required: true
+      - name: root
+        description: PRD workspace directory
+        required: true

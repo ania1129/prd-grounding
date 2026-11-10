@@ -1,0 +1,76 @@
+{
+  "skill": "prd-grounding",
+  "version": "0.2.0",
+  "slug": "order-partial-refund",
+  "title": "订单部分退款",
+  "repo": "/path/to/order-service",
+  "created_at": "2026-11-10T02:00:00+00:00",
+  "updated_at": "2026-11-10T06:00:00+00:00",
+  "current_stage": "PRD",
+  "stages": {
+    "01-requirement": {
+      "status": "done",
+      "path": "01-requirement.md",
+      "updated_at": "2026-11-10T02:10:00+00:00"
+    },
+    "02-analysis": {
+      "status": "done",
+      "path": "02-analysis.md",
+      "updated_at": "2026-11-10T02:20:00+00:00"
+    },
+    "03-goals-metrics": {
+      "status": "done",
+      "path": "03-goals-metrics.md",
+      "updated_at": "2026-11-10T02:30:00+00:00"
+    },
+    "04-code-baseline": {
+      "status": "done",
+      "path": "04-code-baseline.md",
+      "updated_at": "2026-11-10T03:00:00+00:00"
+    },
+    "05-solution-options": {
+      "status": "done",
+      "path": "05-solution-options.md",
+      "updated_at": "2026-11-10T03:30:00+00:00"
+    },
+    "06-solution-decision": {
+      "status": "done",
+      "path": "06-solution-decision.md",
+      "updated_at": "2026-11-10T04:00:00+00:00"
+    },
+    "07-approach": {
+      "status": "done",
+      "path": "07-approach.md",
+      "updated_at": "2026-11-10T04:40:00+00:00"
+    },
+    "08-flows-open-questions": {
+      "status": "done",
+      "path": "08-flows-open-questions.md",
+      "updated_at": "2026-11-10T05:10:00+00:00"
+    },
+    "PRD": {
+      "status": "done",
+      "path": "PRD.md",
+      "updated_at": "2026-11-10T06:00:00+00:00"
+    },
+    "09-decision-log": {
+      "status": "done",
+      "path": "09-decision-log.md",
+      "updated_at": "2026-11-10T05:40:00+00:00"
+    }
+  },
+  "gates": {
+    "solution-choice": {
+      "result": "passed",
+      "note": "方案A：复用现有退款单",
+      "updated_at": "2026-11-10T04:00:00+00:00"
+    }
+  },
+  "checkpoints": {
+    "checkpoint-1": {
+      "status": "done",
+      "note": "PM 确认理解与指标",
+      "updated_at": "2026-11-10T02:35:00+00:00"
+    }
+  }
+}
